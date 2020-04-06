@@ -21,7 +21,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
     </style>
-    <title>Biglietti da Svista</title>
+    <title>Carte da Svista</title>
     <style>
         * {
             box-sizing: border-box;
@@ -36,31 +36,7 @@
             font-family: 'Quicksand', sans-serif;
         }
 
-        @media screen and (max-width: 768px) {
-            .h1, h1 {
-                font-size: 2rem;
-            }
-
-            .h2, h2 {
-                font-size: 1rem;
-            }
-
-            h3, .h3 {
-                font-size: 1rem;
-            }
-
-            .two .d-flex {
-                flex-direction: column;
-            }
-
-                .two .d-flex .flip-card1 {
-                    margin: 20px auto;
-                }
-
-            .card__container {
-                transform: scale(0.6);
-            }
-        }
+       
 
         .h1, h1 {
             font-family: 'Quicksand', sans-serif;
@@ -107,9 +83,7 @@
             scroll-snap-align: start;
         }
 
-        .small {
-            height: 70vh;
-        }
+        
 
         .one {
             background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
@@ -121,7 +95,8 @@
 
         .three {
             /*background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);*/
-            background-image: url(https://picsum.photos/1920/1080?random=1);
+            /*background-image: url(https://picsum.photos/1920/1080?random=1);*/
+            background-image: linear-gradient(to top, #b695f0 0%, #fad0c4 100%);
         }
 
         .four {
@@ -1033,8 +1008,9 @@
         .button {
             position: relative;
             height: 68px;
-            width: 200px;
-            background: #00BCD4;
+            width: 200px; 
+            background: rgb(13,36,0);
+            background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(44, 154, 143) 48%, rgba(0,255,231,1) 100%);
             border-radius: 8px;
             text-align: center;
             margin: 65px auto 0 auto;
@@ -1138,15 +1114,19 @@
 
 
         #wrapper {
-            width: 100%;
-            height: 50%; 
-            transform: translateX(50%);
+            width: 50%;
+            height: 50%;
             padding: 1%;
             box-sizing: border-box;
-            background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
-            color: #0f3c4b;
-            font-family: arial;
-            font-size: 20px;
+            background-image: url(https://picsum.photos/1920/1080?random=1);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2.4rem;
+            color: white;
+            text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+            z-index: 3;
+            text-decoration-style;
+            text-align:center;
+
         }
 
             #wrapper.dragover {
@@ -1585,6 +1565,32 @@
             .checkbox.checked.violet {
                 background: #38003c;
             }
+        @media screen and (max-width: 768px) {
+
+            body {
+                font-size: 8px;
+            }
+
+            .two .d-flex {
+                flex-direction: column;
+            }
+
+            .hold-or-tap {
+                margin-top: 0px;
+            }
+            html{
+                font-size: 70%
+            }
+
+            .two .d-flex .flip-card1 {
+                margin: 0px auto;
+                transform: scale(0.8);
+            }
+
+            .card__container {
+                transform: scale(0.6);
+            }
+        }
 
     </style>
 </head>
@@ -1784,15 +1790,14 @@
                 <img class="scroll-gif" src="scroll-down.gif" width="100" />
             </div>
         </div>
+
         <div id="wrapper" class="center anim">
             <div id="decorator" class="border anim center">
                 <i class="fa fa-cloud-upload icon" aria-hidden="true"></i>
                 <input id="upload" type="file">
                 <label for="upload"><strong>Choose a file</strong> or drag it here.</label>
             </div>
-        </div>
-        <div id="target" class="imageContainer"></div>
-         
+        </div>      
     </section>
     <section class="four">
         <div data-aos="fade-up">
