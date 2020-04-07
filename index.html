@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
     <link rel="stylesheet" href="https://pattern.kivan-works.com/fonts/kredit.css">
-    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="logo-color.png" />
 
 
 
@@ -318,7 +318,7 @@
         .valid {
             position: absolute;
             bottom: 56px;
-            color: #000;
+            color: white;
             font-size: 0.58rem;
             left: 146px;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
@@ -694,12 +694,13 @@
                 top: 15%;
                 left: 4%;
                 color: white;
-                font-size: 1.5rem;
+                font-size: 3rem;
+                font-weight: 900;
                 text-shadow: -2px 0 1px rgba(255, 255, 255, 0.4), 0 -2px 1px rgba(255, 255, 255, 0.6), 2px 0 1px rgb(0, 0, 0), 0 2px 1px rgb(0, 0, 0);
             }
 
             .field input {
-                -webkit-text-fill-color: rgba(213, 225, 224, 0.5);
+                -webkit-text-fill-color: #fff;
                 text-shadow: -2px 0 1px rgba(255, 255, 255, 0.4), 0 -2px 1px rgba(255, 255, 255, 0.6), 2px 0 1px rgb(0, 0, 0), 0 2px 1px rgb(0, 0, 0);
                 text-transform: uppercase;
                 font-family: kredit-front;
@@ -783,13 +784,25 @@
             bottom: calc(3% + .5rem);
             width: 6rem;
         }
-
+        .expiration label {
+            font-size: 13px;
+        }
         .card-type {
             bottom: 3%;
             right: 3%;
             width: 20%;
         }
-
+        .field{
+            padding-top: 2rem;
+        }
+        #card_num {
+            font-size: 3rem;
+            font-weight: 900;
+        }
+        #name {
+            font-size: 2rem;
+            font-weight: 900;
+        }
             .card-type input {
                 opacity: 0;
                 pointer-events: none;
@@ -1008,7 +1021,7 @@
             height: 68px;
             width: 200px;
             background: rgb(13,36,0);
-            background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(44, 154, 143) 48%, rgba(0,255,231,1) 100%);
+            background: linear-gradient(90deg, rgb(206, 151, 241) 0%, rgb(246, 174, 255) 48%, rgb(224, 128, 255) 100%);
             border-radius: 8px;
             text-align: center;
             margin: 65px auto 0 auto;
@@ -1572,7 +1585,12 @@
             }
 
 
-
+            .logo1{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 5%;
+            }
 
         @media screen and (max-width: 768px) {
 
@@ -1589,11 +1607,34 @@
             .header-img {
                 margin-top: -85px;
             }
-
+            .button.active .arrow {
+                -webkit-transform: rotate(88deg) translate(0px, 60px);
+                -moz-transform: rotate(88deg) translate(0px, 60px);
+                transform: rotate(88deg) translate(0px, 60px);
+            }
             .two .d-flex {
                 flex-direction: column;
             }
-
+            .csv{
+                width: 10rem;
+            }
+            #csv {
+                font-size: 2.5rem;
+                font-weight: 900;
+                color: white;
+                -webkit-text-fill-color: #fff;
+                text-shadow: -2px 0 1px rgba(255, 255, 255, 0.4), 0 -2px 1px rgba(255, 255, 255, 0.6), 2px 0 1px rgb(0, 0, 0), 0 2px 1px rgb(0, 0, 0);
+                text-transform: uppercase;
+                font-family: kredit-front;
+            }
+            .expiration {
+               
+                width: 10rem;
+                height: 7rem;
+            }
+            #expiration {
+                font-size: 2.8rem;
+            }
             .hold-or-tap {
                 margin-top: 0px;
             }
@@ -1642,9 +1683,12 @@
                 font-size: 4rem;
             }
 
-            .scene input:not([type="radio"]) {
+            .scene input:not([type="radio"]), .scene select {
                  
                 font-size: 3.5rem;
+            }
+            .submit-btn h3 {
+                transform: translateY(-4px);
             }
         }
     </style>
@@ -1652,6 +1696,7 @@
 <body>
     <section class="one">
         <div>
+            <!--<img alt="" src="logo-color.png" class="logo1"/>-->
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 header-img  text-center" data-aos="zoom-out-left" data-aos-duration="3000">
@@ -1880,7 +1925,7 @@
                             <label for="name">Full Name</label>
                         </div>
                         <div class="field expiration">
-                            <input id="expiration" required placeholder="12/16" pattern="\d{1,2}/\d{2}">
+                            <input id="expiration" required placeholder="12/16" maxlength="5." pattern="\d{1,2}/\d{2}">
                             <label for="expiration">Expiration</label>
                         </div>
                         <div class="card-type">
