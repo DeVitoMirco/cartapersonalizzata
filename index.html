@@ -30,12 +30,17 @@
         html {
             scroll-snap-type: y proximity;
             margin: 0;
+            -webkit-overflow-scrolling: touch
         }
 
         .header {
             font-family: 'Quicksand', sans-serif;
         }
 
+        body {
+            min-height: 100vh;
+            overflow: visible;
+        }
 
 
         .h1, h1 {
@@ -608,10 +613,7 @@
             box-sizing: border-box;
         }
 
-        body {
-            min-height: 100vh;
-        }
-
+     
         input {
             font: inherit;
             color: inherit;
